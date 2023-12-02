@@ -1,18 +1,22 @@
-# Cookiecutter SAM for Spring cloud Java Lambda functions
+# SAM template for Spring cloud Java Lambda functions
 
 This is a [Cookiecutter](https://github.com/audreyr/cookiecutter) template to create a Serverless Spring cloud function Hello World App based on Serverless Application Model (SAM) and Java.
 
-It is important to note that you should not try to `git clone` this project but use `cookiecutter` CLI instead as `{{cookiecutter.project_name}}` will be rendered based on your input and therefore all variables and files will be rendered properly.
+It is important to note that you should not try to `git clone` this project but use `sam` CLI instead.
 
 ## Requirements
 
-Install `sam` command line:
+Install `sam cli` command line
 
 ## Usage
 
-Generate a new SAM based Serverless App: `sam init --location `.
+Generate a new Spring cloud function SAM based Serverless app
 
-You'll be prompted a few questions to help this cookiecutter template to scaffold this project and after its completed you should see a new folder at your current path with the name of the project you gave as input.
+```
+sam init --location gh:shinusuresh/aws-sam-spring-cloud-function-gradle-template
+```
+
+You'll be prompted to give project group and artifact id's.
 
 # Credits
 

@@ -17,22 +17,4 @@ def test_project_tree(cookies):
     assert result.project_path.joinpath("src", "main", "java").is_dir()
     assert result.project_path.joinpath("src", "main", "java", "com").is_dir()
     assert result.project_path.joinpath("src", "main", "java", "com", "demo", "app", "FunctionApplication.java").is_file()
-    assert result.project.join("src", "test", "java", "com", "demo", "app", "FunctionApplicationTests.java").isfile()
-
-
-def test_app_content(cookies):
-    result = cookies.bake(extra_context={"project_name": "my_lambda"})
-    app_file = result.project.join("src", "main", "java", "helloworld", "App.java")
-    app_content = app_file.readlines()
-    app_content = "".join(app_content)
-
-    contents = (
-        "package helloword",
-        "class App implements RequestHandler<Object, Object>",
-        "https://checkip.amazonaws.com",
-        "return new GatewayResponse",
-        "getPageContents",
-    )
-
-    for content in contents:
-        assert content in app_content
+    assert result.project_path.joinpath("src", "test", "java", "com", "demo", "app", "FunctionApplicationTests.java").is_file()
