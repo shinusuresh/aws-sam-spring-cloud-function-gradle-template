@@ -1,0 +1,8 @@
+version: 2
+updates:
+    - package-ecosystem: "gradle"
+      directory: "{{cookiecutter.artifact_id}}"
+      schedule:
+          interval: "daily"
+      rebase-strategy: "disabled"
+
